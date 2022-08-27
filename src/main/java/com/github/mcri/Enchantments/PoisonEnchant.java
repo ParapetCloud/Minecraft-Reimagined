@@ -29,7 +29,7 @@ public class PoisonEnchant extends Enchantment {
     @Override
     public void onTargetDamaged(LivingEntity user, Entity target, int level) {
         if (target instanceof LivingEntity livingEntity) {
-            livingEntity.addStatusEffect(new StatusEffectInstance(StatusEffects.POISON, 5 * 20 * level, level));
+            livingEntity.addStatusEffect(new StatusEffectInstance(StatusEffects.POISON, 5 * 20, level - 1));
         }
 
         super.onTargetDamaged(user, target, level);
