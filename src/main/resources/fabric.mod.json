@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "id": "mcri",
+  "version": "${version}",
+
+  "name": "Minecraft Reimagined",
+  "description": "More than just minecraft",
+  "authors": [
+    "Parapet Cloud"
+  ],
+  "contact": {
+    "homepage": "https://github.com/ParapetCloud/Minecraft-Reimagined",
+    "sources": "https://github.com/ParapetCloud/Minecraft-Reimagined"
+  },
+
+  "license": "CC0-1.0",
+  "icon": "assets/mcri/icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "com.github.mcri.MinecraftReimagined"
+    ]
+  },
+  "mixins": [],
+
+  "depends": {
+    "fabricloader": ">=0.14.6",
+    "fabric": "*",
+    "minecraft": "~1.19",
+    "java": ">=17"
+  },
+  "suggests": {
+    "another-mod": "*"
+  }
+}
