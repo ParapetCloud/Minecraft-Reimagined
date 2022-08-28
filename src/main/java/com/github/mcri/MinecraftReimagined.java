@@ -5,16 +5,14 @@ import net.fabricmc.api.ModInitializer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.github.mcri.Enchantments.FrostbiteEnchant;
-import com.github.mcri.Enchantments.PoisonEnchant;
-import com.github.mcri.Enchantments.WitheringEnchant;
-import com.github.mcri.StatusEffects.FrozenEffect;
+import com.github.mcri.Enchantments.*;
+import com.github.mcri.StatusEffects.*;
 
 public class MinecraftReimagined implements ModInitializer {
 	// This logger is used to write text to the console and the log file.
 	// It is considered best practice to use your mod id as the logger's name.
 	// That way, it's clear which mod wrote info, warnings, and errors.
-	public static final Logger LOGGER = LoggerFactory.getLogger("modid");
+	public static final Logger LOGGER = LoggerFactory.getLogger("mcri");
 
 	@Override
 	public void onInitialize() {
@@ -23,9 +21,13 @@ public class MinecraftReimagined implements ModInitializer {
 		// Proceed with mild caution.
 
 		LOGGER.info("Initializing...");
-		PoisonEnchant.Register();
+		//Enchantments
 		FrostbiteEnchant.Register();
-		FrozenEffect.Register();
+		LifeStealEnchant.Register();
+		PoisonEnchant.Register();
 		WitheringEnchant.Register();
+
+		//Status effects
+		FrozenEffect.Register();
 	}
 }

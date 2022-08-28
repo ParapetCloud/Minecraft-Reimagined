@@ -22,7 +22,9 @@
       "com.github.mcri.MinecraftReimagined"
     ]
   },
-  "mixins": [],
+  "mixins": [
+    "mcri.mixins.json"
+  ],
 
   "depends": {
     "fabricloader": ">=0.14.6",
