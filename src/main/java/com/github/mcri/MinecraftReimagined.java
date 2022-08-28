@@ -6,6 +6,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import com.github.mcri.Enchantments.*;
+import com.github.mcri.StatusEffects.*;
 
 public class MinecraftReimagined implements ModInitializer {
 	// This logger is used to write text to the console and the log file.
@@ -21,10 +22,12 @@ public class MinecraftReimagined implements ModInitializer {
 
 		LOGGER.info("Initializing...");
 		//Enchantments
-		PoisonEnchant.Register();
 		FrostbiteEnchant.Register();
-		FrozenEffect.Register();
-		WitheringEnchant.Register();
 		LifeStealEnchant.Register();
+		PoisonEnchant.Register();
+		WitheringEnchant.Register();
+
+		//Status effects
+		FrozenEffect.Register();
 	}
 }
