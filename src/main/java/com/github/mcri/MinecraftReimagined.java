@@ -5,8 +5,10 @@ import net.fabricmc.api.ModInitializer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import com.github.mcri.Enchantments.FrostbiteEnchant;
 import com.github.mcri.Enchantments.PoisonEnchant;
 import com.github.mcri.Enchantments.WitheringEnchant;
+import com.github.mcri.StatusEffects.FrozenEffect;
 
 public class MinecraftReimagined implements ModInitializer {
 	// This logger is used to write text to the console and the log file.
@@ -22,6 +24,8 @@ public class MinecraftReimagined implements ModInitializer {
 
 		LOGGER.info("Initializing...");
 		PoisonEnchant.Register();
+		FrostbiteEnchant.Register();
+		FrozenEffect.Register();
 		WitheringEnchant.Register();
 	}
 }
