@@ -7,6 +7,10 @@ import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
+import net.minecraft.item.AxeItem;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
+import net.minecraft.item.TridentItem;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 
@@ -19,6 +23,15 @@ public class PoisonEnchant extends Enchantment {
 
     public PoisonEnchant() {
         super(Enchantment.Rarity.VERY_RARE, EnchantmentTarget.WEAPON, new EquipmentSlot[] { EquipmentSlot.MAINHAND });
+    }
+
+    @Override
+    public boolean isAcceptableItem(ItemStack stack) {
+        Item item = stack.getItem();
+        if (item instanceof AxeItem || item instanceof TridentItem) {
+            return true;
+        }
+        return super.isAcceptableItem(stack);
     }
 
     @Override

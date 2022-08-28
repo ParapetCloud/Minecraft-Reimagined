@@ -6,6 +6,11 @@ import net.minecraft.entity.Entity;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.effect.StatusEffectInstance;
+import net.minecraft.item.AxeItem;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
+import net.minecraft.item.TridentItem;
+
 import com.github.mcri.StatusEffects.FrozenEffect;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
@@ -19,6 +24,15 @@ public class FrostbiteEnchant extends Enchantment {
 
     public FrostbiteEnchant() {
         super(Enchantment.Rarity.RARE, EnchantmentTarget.WEAPON, new EquipmentSlot[] { EquipmentSlot.MAINHAND });
+    }
+
+    @Override
+    public boolean isAcceptableItem(ItemStack stack) {
+        Item item = stack.getItem();
+        if (item instanceof AxeItem || item instanceof TridentItem) {
+            return true;
+        }
+        return super.isAcceptableItem(stack);
     }
 
     @Override
