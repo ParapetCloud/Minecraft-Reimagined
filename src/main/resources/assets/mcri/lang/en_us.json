@@ -1,5 +1,7 @@
 {
     "enchantment.mcri.poison": "Poison",
     "enchantment.mcri.withering": "Withering",
+    "effect.mcri.frozen": "Frozen",
+    "enchantment.mcri.frostbite": "Frostbite",
     "enchantment.mcri.life_steal": "Life Steal"
 }

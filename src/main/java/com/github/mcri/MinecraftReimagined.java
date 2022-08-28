@@ -22,6 +22,8 @@ public class MinecraftReimagined implements ModInitializer {
 		LOGGER.info("Initializing...");
 		//Enchantments
 		PoisonEnchant.Register();
+		FrostbiteEnchant.Register();
+		FrozenEffect.Register();
 		WitheringEnchant.Register();
 		LifeStealEnchant.Register();
 	}
