@@ -7,6 +7,7 @@ import org.slf4j.LoggerFactory;
 
 import com.github.mcri.Enchantments.FrostbiteEnchant;
 import com.github.mcri.Enchantments.PoisonEnchant;
+import com.github.mcri.Enchantments.WitheringEnchant;
 import com.github.mcri.StatusEffects.FrozenEffect;
 
 public class MinecraftReimagined implements ModInitializer {
@@ -25,5 +26,6 @@ public class MinecraftReimagined implements ModInitializer {
 		PoisonEnchant.Register();
 		FrostbiteEnchant.Register();
 		FrozenEffect.Register();
+		WitheringEnchant.Register();
 	}
 }
