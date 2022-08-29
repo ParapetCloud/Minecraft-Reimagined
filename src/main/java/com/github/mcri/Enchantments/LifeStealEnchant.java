@@ -12,10 +12,10 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 
 public class LifeStealEnchant extends Enchantment {
-    public static final LifeStealEnchant Instance = new LifeStealEnchant();
+    public static final Enchantment LIFESTEAL = new LifeStealEnchant();
 
     public static void Register() {
-        Registry.register(Registry.ENCHANTMENT, new Identifier("mcri", "life_steal"), Instance);
+        Registry.register(Registry.ENCHANTMENT, new Identifier("mcri", "life_steal"), LIFESTEAL);
     }
 
     public LifeStealEnchant() {

@@ -23,10 +23,10 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 
 public class MountedEnchant extends Enchantment {
-    public static final MountedEnchant Instance = new MountedEnchant();
+    public static final Enchantment MOUNTED = new MountedEnchant();
 
     public static void Register() {
-        Registry.register(Registry.ENCHANTMENT, new Identifier("mcri", "mounted"), Instance);
+        Registry.register(Registry.ENCHANTMENT, new Identifier("mcri", "mounted"), MOUNTED);
     }
 
     public MountedEnchant() {

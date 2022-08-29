@@ -21,14 +21,14 @@ public class MinecraftReimagined implements ModInitializer {
 		// Proceed with mild caution.
 
 		LOGGER.info("Initializing...");
-		//Enchantments
+		// Enchantments
 		FrostbiteEnchant.Register();
 		LifeStealEnchant.Register();
 		PoisonEnchant.Register();
 		WitheringEnchant.Register();
 		MountedEnchant.Register();
 
-		//Status effects
+		// Status effects
 		FrozenEffect.Register();
 	}
 }

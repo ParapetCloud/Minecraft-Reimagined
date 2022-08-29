@@ -2,6 +2,7 @@ package com.github.mcri.Enchantments;
 
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.EnchantmentTarget;
+import net.minecraft.enchantment.Enchantments;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.LivingEntity;
@@ -11,10 +12,10 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 
 public class WitheringEnchant extends Enchantment {
-    public static final WitheringEnchant Instance = new WitheringEnchant();
+    public static final Enchantment WITHERING = new WitheringEnchant();
 
     public static void Register() {
-        Registry.register(Registry.ENCHANTMENT, new Identifier("mcri", "withering"), Instance);
+        Registry.register(Registry.ENCHANTMENT, new Identifier("mcri", "withering"), WITHERING);
     }
 
     public WitheringEnchant() {
@@ -24,6 +25,14 @@ public class WitheringEnchant extends Enchantment {
     @Override
     public int getMaxLevel() {
         return 3;
+    }
+
+    @Override
+    protected boolean canAccept(Enchantment other) {
+        if (other == Enchantments.FIRE_ASPECT || other == PoisonEnchant.POISON || other == FrostbiteEnchant.FROSTBITE) {
+            return false;
+        }
+        return true;
     }
 
     @Override
