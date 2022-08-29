@@ -27,6 +27,7 @@ public class MinecraftReimagined implements ModInitializer {
 		PoisonEnchant.Register();
 		WitheringEnchant.Register();
 		MountedEnchant.Register();
+		LevitationEnchant.Register();
 
 		// Status effects
 		FrozenEffect.Register();
