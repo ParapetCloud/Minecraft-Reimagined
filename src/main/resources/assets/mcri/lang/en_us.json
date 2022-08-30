@@ -5,5 +5,11 @@
     "enchantment.mcri.frostbite": "Frostbite",
     "enchantment.mcri.mounted": "Mounted",
     "enchantment.mcri.life_steal": "Life Steal",
-    "enchantment.mcri.levitation": "Levitation"
+    "enchantment.mcri.levitation": "Levitation",
+    "enchantment.mcri.bane_aquatics": "Bane of Aquatics",
+    "enchantment.mcri.bane_ender": "Bane of Ender",
+    "enchantment.mcri.bane_swines": "Bane of Swines",
+    "enchantment.mcri.bane_villagers": "Bane of Villagers",
+    "enchantment.mcri.bane_illagers": "Bane of Illagers",
+    "effect.mcri.enderbane_effect": "Enderbane"
 }
