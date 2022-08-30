@@ -5,10 +5,13 @@ import net.fabricmc.api.ModInitializer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import com.github.mcri.Enchantments.BaneofIllagersEnchant;
 import com.github.mcri.Enchantments.FrostbiteEnchant;
 import com.github.mcri.Enchantments.LevitationEnchant;
+import com.github.mcri.Enchantments.LightningEnchant;
 import com.github.mcri.Enchantments.PoisonEnchant;
 import com.github.mcri.Enchantments.WitheringEnchant;
+import com.github.mcri.Items.ModItems;
 import com.github.mcri.StatusEffects.FrozenEffect;
 
 public class MinecraftReimagined implements ModInitializer {
@@ -17,11 +20,15 @@ public class MinecraftReimagined implements ModInitializer {
 	// That way, it's clear which mod wrote info, warnings, and errors.
 	public static final Logger LOGGER = LoggerFactory.getLogger("modid");
 
+	public static final String MOD_ID = "mcri";
+
 	@Override
 	public void onInitialize() {
 		// This code runs as soon as Minecraft is in a mod-load-ready state.
 		// However, some things (like resources) may still be uninitialized.
 		// Proceed with mild caution.
+
+		ModItems.registerItems();
 
 		LOGGER.info("Initializing...");
 		PoisonEnchant.Register();
@@ -29,5 +36,7 @@ public class MinecraftReimagined implements ModInitializer {
 		FrozenEffect.Register();
 		WitheringEnchant.Register();
 		LevitationEnchant.Register();
+		LightningEnchant.Register();
+		BaneofIllagersEnchant.Register();
 	}
 }
