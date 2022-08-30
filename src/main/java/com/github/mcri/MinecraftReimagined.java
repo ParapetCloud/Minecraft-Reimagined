@@ -2,17 +2,22 @@ package com.github.mcri;
 
 import net.fabricmc.api.ModInitializer;
 
+import java.util.logging.LogManager;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import com.github.mcri.Enchantments.*;
 import com.github.mcri.StatusEffects.*;
+import com.github.mcri.world.dimension.ModDimensions;
 
 public class MinecraftReimagined implements ModInitializer {
 	// This logger is used to write text to the console and the log file.
 	// It is considered best practice to use your mod id as the logger's name.
 	// That way, it's clear which mod wrote info, warnings, and errors.
 	public static final Logger LOGGER = LoggerFactory.getLogger("mcri");
+
+	public static final String MOD_ID = "mcridim";
 
 	@Override
 	public void onInitialize() {
@@ -31,5 +36,7 @@ public class MinecraftReimagined implements ModInitializer {
 
 		// Status effects
 		FrozenEffect.Register();
+
+		ModDimensions.register();
 	}
 }
