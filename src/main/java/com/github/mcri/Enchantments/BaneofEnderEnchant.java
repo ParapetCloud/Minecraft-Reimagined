@@ -57,12 +57,12 @@ public class BaneofEnderEnchant extends Enchantment {
 
     @Override
     public int getMinPower(int level) {
-        return 1;
+        return level * 6;
     }
 
     @Override
     public int getMaxPower(int level) {
-        return level * 6;
+        return this.getMinPower(level) + 5;
     }
 
     @Override
