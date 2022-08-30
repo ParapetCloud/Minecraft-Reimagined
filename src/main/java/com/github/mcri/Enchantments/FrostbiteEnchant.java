@@ -39,7 +39,7 @@ public class FrostbiteEnchant extends Enchantment {
 
     @Override
     protected boolean canAccept(Enchantment other) {
-        if (other == Enchantments.FIRE_ASPECT || other == PoisonEnchant.POISON || other == WitheringEnchant.WITHERING) {
+        if (other == Enchantments.FIRE_ASPECT || other == PoisonAspectEnchant.POISON || other == WitheringEnchant.WITHERING) {
             return false;
         }
         return true;

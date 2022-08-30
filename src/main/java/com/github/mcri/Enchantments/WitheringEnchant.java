@@ -42,7 +42,7 @@ public class WitheringEnchant extends Enchantment {
 
     @Override
     protected boolean canAccept(Enchantment other) {
-        if (other == Enchantments.FIRE_ASPECT || other == PoisonEnchant.POISON || other == FrostbiteEnchant.FROSTBITE) {
+        if (other == Enchantments.FIRE_ASPECT || other == PoisonAspectEnchant.POISON || other == FrostbiteEnchant.FROSTBITE) {
             return false;
         }
         return true;
