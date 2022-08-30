@@ -1,8 +1,5 @@
 package com.github.mcri.Enchantments;
 
-import javax.annotation.Nullable;
-
-import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.EnchantmentTarget;
 import net.minecraft.entity.Entity;
@@ -10,9 +7,6 @@ import net.minecraft.entity.EntityType;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.SpawnReason;
-import net.minecraft.entity.effect.StatusEffectInstance;
-import net.minecraft.entity.effect.StatusEffects;
-import net.minecraft.item.ItemStack;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.BlockPos;
@@ -36,13 +30,13 @@ public class LightningEnchant extends Enchantment {
 
     @Override
     public void onTargetDamaged(LivingEntity user, Entity target, int level) {
-        if(!user.world.isClient()) {
-            ServerWorld world = (ServerWorld)user.world;
+        if (!user.world.isClient()) {
+            ServerWorld world = (ServerWorld) user.world;
             BlockPos position = target.getBlockPos();
 
-            if(level == 1) {
+            if (level == 1) {
                 EntityType.LIGHTNING_BOLT.spawn(world, null, null, null, position,
-                SpawnReason.TRIGGERED, true, true);
+                        SpawnReason.TRIGGERED, true, true);
             }
         }
 
