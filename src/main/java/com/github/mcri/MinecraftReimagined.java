@@ -7,6 +7,7 @@ import org.slf4j.LoggerFactory;
 
 import com.github.mcri.Enchantments.*;
 import com.github.mcri.StatusEffects.*;
+import com.github.mcri.Items.ModItems;
 
 public class MinecraftReimagined implements ModInitializer {
 	// This logger is used to write text to the console and the log file.
@@ -14,11 +15,15 @@ public class MinecraftReimagined implements ModInitializer {
 	// That way, it's clear which mod wrote info, warnings, and errors.
 	public static final Logger LOGGER = LoggerFactory.getLogger("mcri");
 
+	public static final String MOD_ID = "mcri";
+
 	@Override
 	public void onInitialize() {
 		// This code runs as soon as Minecraft is in a mod-load-ready state.
 		// However, some things (like resources) may still be uninitialized.
 		// Proceed with mild caution.
+
+		ModItems.registerItems();
 
 		LOGGER.info("Initializing...");
 		// Enchantments
@@ -31,5 +36,7 @@ public class MinecraftReimagined implements ModInitializer {
 
 		// Status effects
 		FrozenEffect.Register();
+		LightningEnchant.Register();
+		BaneofIllagersEnchant.Register();
 	}
 }

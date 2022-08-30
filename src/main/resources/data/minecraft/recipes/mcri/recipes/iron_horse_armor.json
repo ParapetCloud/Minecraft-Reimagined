@@ -1,0 +1,27 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "  #",
+        "ISI",
+        "C C"
+    ],
+    "key": {
+        "#": {
+            "item": "minecraft:iron_helmet"
+        },
+        "I": {
+            "item": "minecraft:iron_leggings"
+        },
+        "S": {
+            "item": "minecraft:saddle"
+        },
+        "C": {
+            "item": "minecraft:iron_boots"
+        }
+    },
+    "result": {
+        "item": "minecraft:iron_horse_armor",
+        "count": 1
+    },
+    "group": "iron_horse_armor"
+}
