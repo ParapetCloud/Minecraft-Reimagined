@@ -2,20 +2,16 @@ package com.github.mcri.Enchantments;
 
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.EnchantmentTarget;
-import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityGroup;
 import net.minecraft.entity.EquipmentSlot;
-import net.minecraft.entity.LivingEntity;
-import net.minecraft.entity.effect.StatusEffectInstance;
-import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 
 public class BaneofIllagersEnchant extends Enchantment {
-    public static final BaneofIllagersEnchant Instance = new BaneofIllagersEnchant();
+    public static final Enchantment BANEILLAGERS = new BaneofIllagersEnchant();
 
     public static void Register() {
-        Registry.register(Registry.ENCHANTMENT, new Identifier("mcri", "baneofillagers"), Instance);
+        Registry.register(Registry.ENCHANTMENT, new Identifier("mcri", "baneofillagers"), BANEILLAGERS);
     }
 
     public BaneofIllagersEnchant() {
