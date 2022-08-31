@@ -33,10 +33,14 @@ public class MinecraftReimagined implements ModInitializer {
 		WitheringEnchant.Register();
 		MountedEnchant.Register();
 		LevitationEnchant.Register();
+		BaneofAquaticsEnchant.Register();
+		BaneofEnderEnchant.Register();
+		BaneofSwinesEnchant.Register();
+		BaneofVillagersEnchant.Register();
+		BaneofIllagersEnchant.Register();
 
 		// Status effects
 		FrozenEffect.Register();
-		LightningEnchant.Register();
-		BaneofIllagersEnchant.Register();
+		BaneofEnderEffect.Register();
 	}
 }
