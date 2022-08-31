@@ -27,7 +27,9 @@ public class BaneofAquaticsEnchant extends Enchantment {
     @Override
     public boolean isAcceptableItem(ItemStack stack) {
         Item item = stack.getItem();
-        if (item instanceof AxeItem || item instanceof SwordItem || item instanceof TridentItem) {
+        if (item instanceof AxeItem ||
+                item instanceof SwordItem ||
+                item instanceof TridentItem) {
             return true;
         }
         return super.isAcceptableItem(stack);
@@ -35,8 +37,9 @@ public class BaneofAquaticsEnchant extends Enchantment {
 
     @Override
     protected boolean canAccept(Enchantment other) {
-        if (other == Enchantments.BANE_OF_ARTHROPODS || other == BaneofSwinesEnchant.BANESWINES
-                || other == BaneofVillagersEnchant.BANEVILLAGERS ||
+        if (other == Enchantments.BANE_OF_ARTHROPODS ||
+                other == BaneofSwinesEnchant.BANESWINES ||
+                other == BaneofVillagersEnchant.BANEVILLAGERS ||
                 other == BaneofEnderEnchant.BANEENDER ||
                 other == BaneofIllagersEnchant.BANEILLAGERS) {
             return false;
@@ -47,11 +50,6 @@ public class BaneofAquaticsEnchant extends Enchantment {
     @Override
     public int getMinPower(int level) {
         return level * 6;
-    }
-
-    @Override
-    public int getMaxPower(int level) {
-        return this.getMinPower(level) + 5;
     }
 
     @Override

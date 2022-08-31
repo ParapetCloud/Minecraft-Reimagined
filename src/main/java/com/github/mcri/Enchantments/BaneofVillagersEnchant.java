@@ -35,7 +35,9 @@ public class BaneofVillagersEnchant extends Enchantment {
     @Override
     public boolean isAcceptableItem(ItemStack stack) {
         Item item = stack.getItem();
-        if (item instanceof AxeItem || item instanceof SwordItem || item instanceof TridentItem) {
+        if (item instanceof AxeItem ||
+                item instanceof SwordItem ||
+                item instanceof TridentItem) {
             return true;
         }
         return super.isAcceptableItem(stack);
@@ -43,7 +45,9 @@ public class BaneofVillagersEnchant extends Enchantment {
 
     @Override
     protected boolean canAccept(Enchantment other) {
-        if (other == Enchantments.BANE_OF_ARTHROPODS || other == BaneofAquaticsEnchant.BANEAQUATICS || other == BaneofIllagersEnchant.BANEILLAGERS ||
+        if (other == Enchantments.BANE_OF_ARTHROPODS ||
+                other == BaneofAquaticsEnchant.BANEAQUATICS ||
+                other == BaneofIllagersEnchant.BANEILLAGERS ||
                 other == BaneofSwinesEnchant.BANESWINES ||
                 other == BaneofEnderEnchant.BANEENDER) {
             return false;
@@ -54,11 +58,6 @@ public class BaneofVillagersEnchant extends Enchantment {
     @Override
     public int getMinPower(int level) {
         return level * 6;
-    }
-
-    @Override
-    public int getMaxPower(int level) {
-        return this.getMinPower(level) + 5;
     }
 
     @Override
@@ -81,7 +80,12 @@ public class BaneofVillagersEnchant extends Enchantment {
                 // retrieve user's base attack damage, to use in the final damage calculation
                 float damage = (float) user.getAttributeValue(EntityAttributes.GENERIC_ATTACK_DAMAGE)
                         + EnchantmentHelper.getAttackDamage(user.getMainHandStack(), user.getGroup());
-                target.damage(DamageSource.mob(user), damage + (level * 2.5F));
+                if (user instanceof PlayerEntity) {
+                    PlayerEntity player = (PlayerEntity) user;
+                    target.damage(DamageSource.player(player), damage + (level * 2.5F));
+                } else {
+                    target.damage(DamageSource.mob(user), damage + (level * 2.5F));
+                }
             }
         }
 
