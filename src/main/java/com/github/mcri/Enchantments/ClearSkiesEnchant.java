@@ -66,7 +66,7 @@ public class ClearSkiesEnchant extends Enchantment {
 
     @Override
     public void onTargetDamaged(LivingEntity user, Entity target, int level) {
-        if (user.world.isSkyVisible(user.getBlockPos()) && (user.world.isRaining() && user.world.isThundering())) {
+        if (user.world.isSkyVisible(user.getBlockPos()) && (!user.world.isRaining() && !user.world.isThundering())) {
             // retrieve user's base attack damage, to use in the final damage calculation
             float damage = (float) user.getAttributeValue(EntityAttributes.GENERIC_ATTACK_DAMAGE)
                     + EnchantmentHelper.getAttackDamage(user.getMainHandStack(), user.getGroup());
