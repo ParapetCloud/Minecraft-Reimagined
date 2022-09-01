@@ -7,6 +7,7 @@ import org.slf4j.LoggerFactory;
 
 import com.github.mcri.Enchantments.*;
 import com.github.mcri.StatusEffects.*;
+import com.github.mcri.block.*;
 import com.github.mcri.Items.ModItems;
 
 public class MinecraftReimagined implements ModInitializer {
@@ -47,5 +48,8 @@ public class MinecraftReimagined implements ModInitializer {
 		// Status effects
 		FrozenEffect.Register();
 		BaneofEnderEffect.Register();
+
+		// Blocks
+		DirtSlabBlock.Register();
 	}
 }
