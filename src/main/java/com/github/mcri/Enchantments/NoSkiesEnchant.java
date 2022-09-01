@@ -18,7 +18,7 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 
 public class NoSkiesEnchant extends Enchantment {
-    public static final Enchantment NOSKIES = new NoSkiesEnchant();
+    public static final NoSkiesEnchant NOSKIES = new NoSkiesEnchant();
 
     public static void Register() {
         Registry.register(Registry.ENCHANTMENT, new Identifier("mcri", "no_skies"), NOSKIES);

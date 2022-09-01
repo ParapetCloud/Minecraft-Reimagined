@@ -18,7 +18,7 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 
 public class ClearSkiesEnchant extends Enchantment {
-    public static final Enchantment CLEARSKIES = new ClearSkiesEnchant();
+    public static final ClearSkiesEnchant CLEARSKIES = new ClearSkiesEnchant();
 
     public static void Register() {
         Registry.register(Registry.ENCHANTMENT, new Identifier("mcri", "clear_skies"), CLEARSKIES);

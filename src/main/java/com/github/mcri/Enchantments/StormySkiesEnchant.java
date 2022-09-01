@@ -18,7 +18,7 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 
 public class StormySkiesEnchant extends Enchantment {
-    public static final Enchantment STORMYSKIES = new StormySkiesEnchant();
+    public static final StormySkiesEnchant STORMYSKIES = new StormySkiesEnchant();
 
     public static void Register() {
         Registry.register(Registry.ENCHANTMENT, new Identifier("mcri", "stormy_skies"), STORMYSKIES);

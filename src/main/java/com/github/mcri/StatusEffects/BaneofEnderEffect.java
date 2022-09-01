@@ -7,7 +7,7 @@ import net.minecraft.util.registry.Registry;
 
 public class BaneofEnderEffect extends StatusEffect {
 
-  public static final StatusEffect ENDERBANEEFFECT = new BaneofEnderEffect();
+  public static final BaneofEnderEffect ENDERBANEEFFECT = new BaneofEnderEffect();
 
   public static void Register() {
     Registry.register(Registry.STATUS_EFFECT, new Identifier("mcri", "enderbane_effect"), ENDERBANEEFFECT);

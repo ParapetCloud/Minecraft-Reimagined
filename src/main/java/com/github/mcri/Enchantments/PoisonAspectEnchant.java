@@ -18,7 +18,7 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 
 public class PoisonAspectEnchant extends Enchantment {
-    public static final Enchantment POISON = new PoisonAspectEnchant();
+    public static final PoisonAspectEnchant POISON = new PoisonAspectEnchant();
 
     public static void Register() {
         Registry.register(Registry.ENCHANTMENT, new Identifier("mcri", "poison_aspect"), POISON);

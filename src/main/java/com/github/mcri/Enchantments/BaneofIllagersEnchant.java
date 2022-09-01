@@ -26,7 +26,7 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 
 public class BaneofIllagersEnchant extends Enchantment {
-    public static final Enchantment BANEILLAGERS = new BaneofIllagersEnchant();
+    public static final BaneofIllagersEnchant BANEILLAGERS = new BaneofIllagersEnchant();
 
     public static void Register() {
         Registry.register(Registry.ENCHANTMENT, new Identifier("mcri", "bane_illagers"), BANEILLAGERS);

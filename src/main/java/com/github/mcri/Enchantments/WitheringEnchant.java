@@ -16,7 +16,7 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 
 public class WitheringEnchant extends Enchantment {
-    public static final Enchantment WITHERING = new WitheringEnchant();
+    public static final WitheringEnchant WITHERING = new WitheringEnchant();
 
     public static void Register() {
         Registry.register(Registry.ENCHANTMENT, new Identifier("mcri", "withering"), WITHERING);
