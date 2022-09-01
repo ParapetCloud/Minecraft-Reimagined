@@ -13,9 +13,10 @@ public class MinecraftReimagined implements ModInitializer {
 	// This logger is used to write text to the console and the log file.
 	// It is considered best practice to use your mod id as the logger's name.
 	// That way, it's clear which mod wrote info, warnings, and errors.
-	public static final Logger LOGGER = LoggerFactory.getLogger("mcri");
-
 	public static final String MOD_ID = "mcri";
+	
+	public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
+
 
 	@Override
 	public void onInitialize() {
@@ -38,6 +39,10 @@ public class MinecraftReimagined implements ModInitializer {
 		BaneofSwinesEnchant.Register();
 		BaneofVillagersEnchant.Register();
 		BaneofIllagersEnchant.Register();
+		ClearSkiesEnchant.Register();
+		NoSkiesEnchant.Register();
+		DarkSkiesEnchant.Register();
+		StormySkiesEnchant.Register();
 
 		// Status effects
 		FrozenEffect.Register();

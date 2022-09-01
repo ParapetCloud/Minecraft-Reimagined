@@ -12,5 +12,9 @@
     "enchantment.mcri.bane_villagers": "Bane of Villagers",
     "enchantment.mcri.bane_illagers": "Bane of Illagers",
     "effect.mcri.enderbane_effect": "Enderbane",
-    "enchantment.mcri.lightning": "Lightning"
+    "enchantment.mcri.lightning": "Lightning",
+    "enchantment.mcri.clear_skies": "Clear Skies",
+    "enchantment.mcri.no_skies": "No Skies",
+    "enchantment.mcri.dark_skies": "Dark Skies",
+    "enchantment.mcri.stormy_skies": "Stormy Skies"
 }
