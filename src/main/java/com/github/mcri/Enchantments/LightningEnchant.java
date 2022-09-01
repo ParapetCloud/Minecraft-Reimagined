@@ -13,10 +13,10 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.registry.Registry;
 
 public class LightningEnchant extends Enchantment {
-    public static final LightningEnchant Instance = new LightningEnchant();
+    public static final LightningEnchant LIGHTNING = new LightningEnchant();
 
     public static void Register() {
-        Registry.register(Registry.ENCHANTMENT, new Identifier("mcri", "lightning"), Instance);
+        Registry.register(Registry.ENCHANTMENT, new Identifier("mcri", "lightning"), LIGHTNING);
     }
 
     public LightningEnchant() {

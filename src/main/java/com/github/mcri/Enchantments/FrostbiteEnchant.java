@@ -18,7 +18,7 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 
 public class FrostbiteEnchant extends Enchantment {
-    public static final Enchantment FROSTBITE = new FrostbiteEnchant();
+    public static final FrostbiteEnchant FROSTBITE = new FrostbiteEnchant();
 
     public static void Register() {
         Registry.register(Registry.ENCHANTMENT, new Identifier("mcri", "frostbite"), FROSTBITE);

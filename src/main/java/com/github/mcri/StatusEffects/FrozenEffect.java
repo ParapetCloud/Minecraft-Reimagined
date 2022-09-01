@@ -8,7 +8,7 @@ import net.minecraft.util.registry.Registry;
 
 public class FrozenEffect extends StatusEffect {
   
-    public static final StatusEffect FROZEN = new FrozenEffect();
+    public static final FrozenEffect FROZEN = new FrozenEffect();
     
     public static void Register() {
       Registry.register(Registry.STATUS_EFFECT, new Identifier("mcri", "frozen"), FROZEN);

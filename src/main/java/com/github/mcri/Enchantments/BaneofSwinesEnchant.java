@@ -25,7 +25,7 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 
 public class BaneofSwinesEnchant extends Enchantment {
-    public static final Enchantment BANESWINES = new BaneofSwinesEnchant();
+    public static final BaneofSwinesEnchant BANESWINES = new BaneofSwinesEnchant();
 
     public static void Register() {
         Registry.register(Registry.ENCHANTMENT, new Identifier("mcri", "bane_swines"), BANESWINES);

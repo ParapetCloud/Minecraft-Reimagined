@@ -14,7 +14,7 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 
 public class BaneofAquaticsEnchant extends Enchantment {
-    public static final Enchantment BANEAQUATICS = new BaneofAquaticsEnchant();
+    public static final BaneofAquaticsEnchant BANEAQUATICS = new BaneofAquaticsEnchant();
 
     public static void Register() {
         Registry.register(Registry.ENCHANTMENT, new Identifier("mcri", "bane_aquatics"), BANEAQUATICS);
