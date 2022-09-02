@@ -25,7 +25,8 @@
     ]
   },
   "mixins": [
-    "mcri.mixins.json"
+    "mcri.mixins.json",
+    "mcri.client.mixins.json"
   ],
 
   "depends": {

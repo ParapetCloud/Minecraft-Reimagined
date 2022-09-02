@@ -4,6 +4,7 @@
   "package": "com.github.mcri.Mixins",
   "compatibilityLevel": "JAVA_17",
   "mixins": [
+    "AnvilRemoveMaxLevelMixin",
     "EnchantmentTimeoutMixin",
     "EndermanDisableTPMixin",
     "ShulkerDisableTPMixin",
