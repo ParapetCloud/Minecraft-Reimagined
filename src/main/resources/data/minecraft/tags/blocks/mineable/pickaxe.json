@@ -1,0 +1,13 @@
+{
+    "replace": false,
+    "values": [
+        "mcri:dirty_cobblestone",
+        "mcri:snowy_cobblestone",
+        "mcri:dirty_cobblestone_slab",
+        "mcri:snowy_cobblestone_slab",
+        "mcri:dirty_cobblestone_stairs",
+        "mcri:snowy_cobblestone_stairs",
+        "mcri:dirty_cobblestone_walls",
+        "mcri:snowy_cobblestone_walls"
+    ]
+}

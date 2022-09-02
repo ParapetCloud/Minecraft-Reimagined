@@ -1,0 +1,9 @@
+{
+    "parent": "minecraft:block/slab",
+    "textures": {
+      "bottom": "mcri:block/snowy_cobblestone",
+      "side": "mcri:block/snowy_cobblestone",
+      "top": "mcri:block/snowy_cobblestone"
+    }
+  }
+  

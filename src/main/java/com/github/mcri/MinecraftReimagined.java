@@ -50,6 +50,14 @@ public class MinecraftReimagined implements ModInitializer {
 		BaneofEnderEffect.Register();
 
 		// Blocks
-		DirtSlabBlock.Register();
+		DirtSlab.Register();
+		DirtyCobblestone.Register();
+		SnowyCobblestone.Register();
+		DirtyCobblestoneSlab.Register();
+		SnowyCobblestoneSlab.Register();
+		DirtyCobblestoneStairs.Register();
+		SnowyCobblestoneStairs.Register();
+		DirtyCobblestoneWall.Register();
+		SnowyCobblestoneWall.Register();
 	}
 }

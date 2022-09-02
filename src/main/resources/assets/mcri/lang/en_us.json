@@ -17,5 +17,13 @@
     "enchantment.mcri.no_skies": "No Skies",
     "enchantment.mcri.dark_skies": "Dark Skies",
     "enchantment.mcri.stormy_skies": "Stormy Skies",
-    "block.mcri.dirt_slab_block": "Coarse Dirt Slab"
+    "block.mcri.dirt_slab": "Coarse Dirt Slab",
+    "block.mcri.dirty_cobblestone": "Dirty Cobblestone",
+    "block.mcri.snowy_cobblestone": "Snowy Cobblestone",
+    "block.mcri.dirty_cobblestone_slab": "Dirty Cobblestone Slab",
+    "block.mcri.snowy_cobblestone_slab": "Snowy Cobblestone Slab",
+    "block.mcri.dirty_cobblestone_stairs": "Dirty Cobblestone Stairs",
+    "block.mcri.snowy_cobblestone_stairs": "Snowy Cobblestone Stairs",
+    "block.mcri.dirty_cobblestone_wall": "Dirty Cobblestone Wall",
+    "block.mcri.snowy_cobblestone_wall": "Snowy Cobblestone Wall"
 }

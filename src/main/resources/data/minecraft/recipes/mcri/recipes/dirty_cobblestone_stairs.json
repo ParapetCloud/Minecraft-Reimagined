@@ -1,0 +1,18 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "#  ",
+        "## ",
+        "###"
+    ],
+    "key": {
+        "#": {
+            "item": "mcri:dirty_cobblestone"
+        }
+    },
+    "result": {
+        "item": "mcri:dirty_cobblestone_stairs",
+        "count": 4
+    },
+    "group": "dirty_cobblestone_stairs"
+}

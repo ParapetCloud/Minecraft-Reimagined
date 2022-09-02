@@ -1,0 +1,14 @@
+{
+    "variants": {
+      "type=bottom": {
+        "model": "mcri:block/snowy_cobblestone_slab"
+      },
+      "type=double": {
+        "model": "mcri:block/snowy_cobblestone"
+      },
+      "type=top": {
+        "model": "mcri:block/snowy_cobblestone_slab"
+      }
+    }
+  }
+  

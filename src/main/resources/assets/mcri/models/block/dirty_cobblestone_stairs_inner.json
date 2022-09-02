@@ -1,0 +1,9 @@
+{
+    "parent": "minecraft:block/inner_stairs",
+    "textures": {
+      "bottom": "mcri:block/dirty_cobblestone",
+      "side": "mcri:block/dirty_cobblestone",
+      "top": "mcri:block/dirty_cobblestone"
+    }
+  }
+  
