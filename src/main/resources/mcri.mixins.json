@@ -8,7 +8,8 @@
     "EnchantmentTimeoutMixin",
     "EndermanDisableTPMixin",
     "ShulkerDisableTPMixin",
-    "EnderpearlDisableTPMixin"
+    "EnderpearlDisableTPMixin",
+    "ElytraDisableFireworksMixin"
   ],
   "client": [],
   "server": [],
