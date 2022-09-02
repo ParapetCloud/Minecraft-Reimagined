@@ -1,4 +1,4 @@
-package com.github.mcri.Mixins.client;
+package com.github.mcri.mixins.client;
 
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.gen.Accessor;

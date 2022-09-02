@@ -21,8 +21,8 @@ public class BaneofAquaticsEnchant extends Enchantment {
     public boolean isAcceptableItem(ItemStack stack) {
         Item item = stack.getItem();
         if (item instanceof AxeItem ||
-                item instanceof SwordItem ||
-                item instanceof TridentItem) {
+            item instanceof SwordItem ||
+            item instanceof TridentItem) {
             return true;
         }
         return super.isAcceptableItem(stack);
@@ -31,10 +31,10 @@ public class BaneofAquaticsEnchant extends Enchantment {
     @Override
     protected boolean canAccept(Enchantment other) {
         if (other == Enchantments.BANE_OF_ARTHROPODS ||
-                other == ModEnchantments.BANE_SWINES ||
-                other == ModEnchantments.BANE_VILLAGERS ||
-                other == ModEnchantments.BANE_ENDER ||
-                other == ModEnchantments.BANE_ILLAGERS) {
+            other == ModEnchantments.BANE_SWINES ||
+            other == ModEnchantments.BANE_VILLAGERS ||
+            other == ModEnchantments.BANE_ENDER ||
+            other == ModEnchantments.BANE_ILLAGERS) {
             return false;
         }
         return true;
@@ -59,7 +59,8 @@ public class BaneofAquaticsEnchant extends Enchantment {
     public float getAttackDamage(int level, EntityGroup group) {
         if (group == EntityGroup.AQUATIC) {
             return 2.5f * level;
-        } else {
+        }
+        else {
             return 0f;
         }
     }

@@ -1,6 +1,6 @@
 package com.github.mcri.enchantments;
 
-import com.github.mcri.StatusEffects.BaneofEnderEffect;
+import com.github.mcri.effect.ModStatusEffects;
 
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.EnchantmentHelper;
@@ -84,7 +84,7 @@ public class BaneofEnderEnchant extends Enchantment {
                     target.damage(DamageSource.mob(user), damage + (level * 2.5F));
                 }
                 livingEntity.addStatusEffect(
-                        new StatusEffectInstance(BaneofEnderEffect.ENDERBANEEFFECT, 1 * 10 * level, level));
+                        new StatusEffectInstance(ModStatusEffects.ENDERBANE_EFFECT, 1 * 10 * level, level));
             }
         }
 

@@ -1,4 +1,4 @@
-package com.github.mcri.Mixins;
+package com.github.mcri.mixins;
 
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.LivingEntity;
@@ -10,7 +10,7 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
-import com.github.mcri.StatusEffects.BaneofEnderEffect;
+import com.github.mcri.effect.ModStatusEffects;
 
 @Mixin(value = EnderPearlEntity.class)
 public abstract class EnderpearlDisableTPMixin {
@@ -18,7 +18,7 @@ public abstract class EnderpearlDisableTPMixin {
     private void teleportDisable(HitResult hitResult, CallbackInfo cir) {
         Entity thrower = ((EnderPearlEntity) (Object) this).getOwner();
         LivingEntity thrower2 = (LivingEntity)thrower;
-        if (thrower2.hasStatusEffect(BaneofEnderEffect.ENDERBANEEFFECT)) {
+        if (thrower2.hasStatusEffect(ModStatusEffects.ENDERBANE_EFFECT)) {
             ((EnderPearlEntity) (Object) this).discard();
             cir.cancel();
         }
