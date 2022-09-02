@@ -29,6 +29,7 @@ public final class ModEnchantments {
     public static LifeStealEnchant LIFESTEAL;
     public static LightningEnchant LIGHTNING;
     public static MountedEnchant MOUNTED;
+    public static WaterjetEnchant Waterjet;
 
     /**
      * Registers all the enchantments that have been pre-registered
