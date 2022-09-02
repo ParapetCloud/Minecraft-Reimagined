@@ -1,0 +1,7 @@
+{
+  "parent": "block/wall_inventory",
+  "textures": {
+    "wall": "mcri:block/dirty_cobblestone",
+    "particle": "mcri:block/dirty_cobblestone"
+  }
+}

@@ -7,7 +7,7 @@
         "entries": [
           {
             "type": "minecraft:item",
-            "name": "mcri:dirt_slab_block",
+            "name": "mcri:dirt_slab",
             "functions": [
               {
                 "function": "minecraft:set_count",
@@ -16,7 +16,7 @@
                 "conditions": [
                   {
                     "condition": "minecraft:block_state_property",
-                    "block": "mcri:dirt_slab_block",
+                    "block": "mcri:dirt_slab",
                     "properties": {
                       "type": "double"
                     }

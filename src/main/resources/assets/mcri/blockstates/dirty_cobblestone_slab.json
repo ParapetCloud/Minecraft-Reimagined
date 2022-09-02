@@ -1,0 +1,14 @@
+{
+    "variants": {
+      "type=bottom": {
+        "model": "mcri:block/dirty_cobblestone_slab"
+      },
+      "type=double": {
+        "model": "mcri:block/dirty_cobblestone"
+      },
+      "type=top": {
+        "model": "mcri:block/dirty_cobblestone_slab"
+      }
+    }
+  }
+  
