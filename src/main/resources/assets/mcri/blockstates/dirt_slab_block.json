@@ -1,0 +1,14 @@
+{
+    "variants": {
+      "type=bottom": {
+        "model": "mcri:block/dirt_slab_block"
+      },
+      "type=double": {
+        "model": "minecraft:block/coarse_dirt"
+      },
+      "type=top": {
+        "model": "mcri:block/dirt_slab_block_top"
+      }
+    }
+  }
+  
