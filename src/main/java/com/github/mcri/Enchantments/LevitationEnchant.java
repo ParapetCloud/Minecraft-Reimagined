@@ -15,7 +15,7 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 
 public class LevitationEnchant extends Enchantment {
-    public static final Enchantment LEVITATION = new LevitationEnchant();
+    public static final LevitationEnchant LEVITATION = new LevitationEnchant();
 
     public static void Register() {
         Registry.register(Registry.ENCHANTMENT, new Identifier("mcri", "levitation"), LEVITATION);

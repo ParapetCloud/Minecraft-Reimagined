@@ -1,5 +1,7 @@
 package com.github.mcri.Enchantments;
 
+import com.github.mcri.StatusEffects.BaneofEnderEffect;
+
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.enchantment.EnchantmentTarget;
@@ -8,14 +10,12 @@ import net.minecraft.entity.Entity;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.attribute.EntityAttributes;
+import net.minecraft.entity.boss.dragon.EnderDragonEntity;
 import net.minecraft.entity.damage.DamageSource;
-import net.minecraft.entity.mob.EvokerEntity;
-import net.minecraft.entity.mob.IllusionerEntity;
-import net.minecraft.entity.mob.PillagerEntity;
-import net.minecraft.entity.mob.RavagerEntity;
-import net.minecraft.entity.mob.VexEntity;
-import net.minecraft.entity.mob.VindicatorEntity;
-import net.minecraft.entity.mob.WitchEntity;
+import net.minecraft.entity.effect.StatusEffectInstance;
+import net.minecraft.entity.mob.EndermanEntity;
+import net.minecraft.entity.mob.EndermiteEntity;
+import net.minecraft.entity.mob.ShulkerEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.AxeItem;
 import net.minecraft.item.Item;
@@ -25,14 +25,14 @@ import net.minecraft.item.TridentItem;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 
-public class BaneofIllagersEnchant extends Enchantment {
-    public static final BaneofIllagersEnchant BANEILLAGERS = new BaneofIllagersEnchant();
+public class BaneofEnderEnchant extends Enchantment {
+    public static final BaneofEnderEnchant BANEENDER = new BaneofEnderEnchant();
 
     public static void Register() {
-        Registry.register(Registry.ENCHANTMENT, new Identifier("mcri", "bane_illagers"), BANEILLAGERS);
+        Registry.register(Registry.ENCHANTMENT, new Identifier("mcri", "bane_ender"), BANEENDER);
     }
 
-    public BaneofIllagersEnchant() {
+    public BaneofEnderEnchant() {
         super(Enchantment.Rarity.RARE, EnchantmentTarget.WEAPON, new EquipmentSlot[] { EquipmentSlot.MAINHAND });
     }
 
@@ -53,7 +53,7 @@ public class BaneofIllagersEnchant extends Enchantment {
                 other == BaneofAquaticsEnchant.BANEAQUATICS ||
                 other == BaneofVillagersEnchant.BANEVILLAGERS ||
                 other == BaneofSwinesEnchant.BANESWINES ||
-                other == BaneofEnderEnchant.BANEENDER) {
+                other == BaneofIllagersEnchant.BANEILLAGERS) {
             return false;
         }
         return true;
@@ -77,13 +77,10 @@ public class BaneofIllagersEnchant extends Enchantment {
     @Override
     public void onTargetDamaged(LivingEntity user, Entity target, int level) {
         if (target instanceof LivingEntity livingEntity) {
-            if (livingEntity instanceof VindicatorEntity ||
-                    livingEntity instanceof VexEntity ||
-                    livingEntity instanceof RavagerEntity ||
-                    livingEntity instanceof WitchEntity ||
-                    livingEntity instanceof EvokerEntity ||
-                    livingEntity instanceof IllusionerEntity ||
-                    livingEntity instanceof PillagerEntity) {
+            if (livingEntity instanceof EndermanEntity ||
+                    livingEntity instanceof EndermiteEntity ||
+                    livingEntity instanceof ShulkerEntity ||
+                    livingEntity instanceof EnderDragonEntity) {
                 // retrieve user's base attack damage, to use in the final damage calculation
                 float damage = (float) user.getAttributeValue(EntityAttributes.GENERIC_ATTACK_DAMAGE)
                         + EnchantmentHelper.getAttackDamage(user.getMainHandStack(), user.getGroup());
@@ -93,6 +90,8 @@ public class BaneofIllagersEnchant extends Enchantment {
                 } else {
                     target.damage(DamageSource.mob(user), damage + (level * 2.5F));
                 }
+                livingEntity.addStatusEffect(
+                        new StatusEffectInstance(BaneofEnderEffect.ENDERBANEEFFECT, 1 * 10 * level, level));
             }
         }
 

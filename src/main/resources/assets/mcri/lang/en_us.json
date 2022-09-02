@@ -6,6 +6,15 @@
     "enchantment.mcri.mounted": "Mounted",
     "enchantment.mcri.life_steal": "Life Steal",
     "enchantment.mcri.levitation": "Levitation",
+    "enchantment.mcri.bane_aquatics": "Bane of Aquatics",
+    "enchantment.mcri.bane_ender": "Bane of Ender",
+    "enchantment.mcri.bane_swines": "Bane of Swines",
+    "enchantment.mcri.bane_villagers": "Bane of Villagers",
+    "enchantment.mcri.bane_illagers": "Bane of Illagers",
+    "effect.mcri.enderbane_effect": "Enderbane",
     "enchantment.mcri.lightning": "Lightning",
-    "enchantment.mcri.baneofillagers": "Bane of Illagers"
+    "enchantment.mcri.clear_skies": "Clear Skies",
+    "enchantment.mcri.no_skies": "No Skies",
+    "enchantment.mcri.dark_skies": "Dark Skies",
+    "enchantment.mcri.stormy_skies": "Stormy Skies"
 }

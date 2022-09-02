@@ -5,7 +5,10 @@
   "compatibilityLevel": "JAVA_17",
   "mixins": [
     "AnvilRemoveMaxLevelMixin",
-    "EnchantmentTimeoutMixin"
+    "EnchantmentTimeoutMixin",
+    "EndermanDisableTPMixin",
+    "ShulkerDisableTPMixin",
+    "EnderpearlDisableTPMixin"
   ],
   "client": [],
   "server": [],
