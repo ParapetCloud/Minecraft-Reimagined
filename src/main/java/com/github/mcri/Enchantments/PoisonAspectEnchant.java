@@ -1,4 +1,4 @@
-package com.github.mcri.Enchantments;
+package com.github.mcri.enchantments;
 
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.EnchantmentTarget;
@@ -14,15 +14,8 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.item.TridentItem;
 import net.minecraft.particle.ParticleTypes;
 import net.minecraft.server.world.ServerWorld;
-import net.minecraft.util.Identifier;
-import net.minecraft.util.registry.Registry;
 
 public class PoisonAspectEnchant extends Enchantment {
-    public static final PoisonAspectEnchant POISON = new PoisonAspectEnchant();
-
-    public static void Register() {
-        Registry.register(Registry.ENCHANTMENT, new Identifier("mcri", "poison_aspect"), POISON);
-    }
 
     public PoisonAspectEnchant() {
         super(Enchantment.Rarity.VERY_RARE, EnchantmentTarget.WEAPON, new EquipmentSlot[] { EquipmentSlot.MAINHAND });
@@ -44,7 +37,7 @@ public class PoisonAspectEnchant extends Enchantment {
 
     @Override
     protected boolean canAccept(Enchantment other) {
-        if (other == Enchantments.FIRE_ASPECT || other == FrostbiteEnchant.FROSTBITE || other == WitheringEnchant.WITHERING) {
+        if (other == Enchantments.FIRE_ASPECT || other == ModEnchantments.FROSTBITE || other == ModEnchantments.WITHERING) {
             return false;
         }
         return true;

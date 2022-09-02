@@ -1,4 +1,4 @@
-package com.github.mcri.Enchantments;
+package com.github.mcri.enchantments;
 
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.EnchantmentTarget;
@@ -14,15 +14,8 @@ import net.minecraft.item.SwordItem;
 import net.minecraft.particle.ParticleTypes;
 import net.minecraft.server.world.ServerWorld;
 import com.github.mcri.StatusEffects.FrozenEffect;
-import net.minecraft.util.Identifier;
-import net.minecraft.util.registry.Registry;
 
 public class FrostbiteEnchant extends Enchantment {
-    public static final FrostbiteEnchant FROSTBITE = new FrostbiteEnchant();
-
-    public static void Register() {
-        Registry.register(Registry.ENCHANTMENT, new Identifier("mcri", "frostbite"), FROSTBITE);
-    }
 
     public FrostbiteEnchant() {
         super(Enchantment.Rarity.RARE, EnchantmentTarget.WEAPON, new EquipmentSlot[] { EquipmentSlot.MAINHAND });
@@ -39,7 +32,7 @@ public class FrostbiteEnchant extends Enchantment {
 
     @Override
     protected boolean canAccept(Enchantment other) {
-        if (other == Enchantments.FIRE_ASPECT || other == PoisonAspectEnchant.POISON || other == WitheringEnchant.WITHERING) {
+        if (other == Enchantments.FIRE_ASPECT || other == ModEnchantments.POISON_ASPECT || other == ModEnchantments.WITHERING) {
             return false;
         }
         return true;

@@ -1,4 +1,4 @@
-package com.github.mcri.Enchantments;
+package com.github.mcri.enchantments;
 
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.EnchantmentHelper;
@@ -14,15 +14,8 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.SwordItem;
 import net.minecraft.item.TridentItem;
-import net.minecraft.util.Identifier;
-import net.minecraft.util.registry.Registry;
 
 public class DarkSkiesEnchant extends Enchantment {
-    public static final DarkSkiesEnchant DARKSKIES = new DarkSkiesEnchant();
-
-    public static void Register() {
-        Registry.register(Registry.ENCHANTMENT, new Identifier("mcri", "dark_skies"), DARKSKIES);
-    }
 
     public DarkSkiesEnchant() {
         super(Enchantment.Rarity.RARE, EnchantmentTarget.WEAPON, new EquipmentSlot[] { EquipmentSlot.MAINHAND });
@@ -41,9 +34,9 @@ public class DarkSkiesEnchant extends Enchantment {
 
     @Override
     protected boolean canAccept(Enchantment other) {
-        if (other == NoSkiesEnchant.NOSKIES ||
-                other == ClearSkiesEnchant.CLEARSKIES ||
-                other == StormySkiesEnchant.STORMYSKIES) {
+        if (other == ModEnchantments.NO_SKIES ||
+                other == ModEnchantments.CLEAR_SKIES ||
+                other == ModEnchantments.STORMY_SKIES) {
             return false;
         }
         return true;

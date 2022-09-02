@@ -1,4 +1,4 @@
-package com.github.mcri.Enchantments;
+package com.github.mcri.enchantments;
 
 import com.github.mcri.StatusEffects.BaneofEnderEffect;
 
@@ -22,15 +22,8 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.SwordItem;
 import net.minecraft.item.TridentItem;
-import net.minecraft.util.Identifier;
-import net.minecraft.util.registry.Registry;
 
 public class BaneofEnderEnchant extends Enchantment {
-    public static final BaneofEnderEnchant BANEENDER = new BaneofEnderEnchant();
-
-    public static void Register() {
-        Registry.register(Registry.ENCHANTMENT, new Identifier("mcri", "bane_ender"), BANEENDER);
-    }
 
     public BaneofEnderEnchant() {
         super(Enchantment.Rarity.RARE, EnchantmentTarget.WEAPON, new EquipmentSlot[] { EquipmentSlot.MAINHAND });
@@ -50,10 +43,10 @@ public class BaneofEnderEnchant extends Enchantment {
     @Override
     protected boolean canAccept(Enchantment other) {
         if (other == Enchantments.BANE_OF_ARTHROPODS ||
-                other == BaneofAquaticsEnchant.BANEAQUATICS ||
-                other == BaneofVillagersEnchant.BANEVILLAGERS ||
-                other == BaneofSwinesEnchant.BANESWINES ||
-                other == BaneofIllagersEnchant.BANEILLAGERS) {
+                other == ModEnchantments.BANE_AQUATICS ||
+                other == ModEnchantments.BANE_VILLAGERS ||
+                other == ModEnchantments.BANE_SWINES ||
+                other == ModEnchantments.BANE_ILLAGERS) {
             return false;
         }
         return true;

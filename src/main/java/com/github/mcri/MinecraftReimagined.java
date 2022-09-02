@@ -5,9 +5,9 @@ import net.fabricmc.api.ModInitializer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.github.mcri.Enchantments.*;
 import com.github.mcri.StatusEffects.*;
 import com.github.mcri.block.*;
+import com.github.mcri.enchantments.ModEnchantments;
 import com.github.mcri.Items.ModItems;
 
 public class MinecraftReimagined implements ModInitializer {
@@ -24,26 +24,10 @@ public class MinecraftReimagined implements ModInitializer {
 		// This code runs as soon as Minecraft is in a mod-load-ready state.
 		// However, some things (like resources) may still be uninitialized.
 		// Proceed with mild caution.
+		LOGGER.info("Initializing...");
 
 		ModItems.registerItems();
-
-		LOGGER.info("Initializing...");
-		// Enchantments
-		FrostbiteEnchant.Register();
-		LifeStealEnchant.Register();
-		PoisonAspectEnchant.Register();
-		WitheringEnchant.Register();
-		MountedEnchant.Register();
-		LevitationEnchant.Register();
-		BaneofAquaticsEnchant.Register();
-		BaneofEnderEnchant.Register();
-		BaneofSwinesEnchant.Register();
-		BaneofVillagersEnchant.Register();
-		BaneofIllagersEnchant.Register();
-		ClearSkiesEnchant.Register();
-		NoSkiesEnchant.Register();
-		DarkSkiesEnchant.Register();
-		StormySkiesEnchant.Register();
+		ModEnchantments.registerAll();
 
 		// Status effects
 		FrozenEffect.Register();
