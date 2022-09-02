@@ -1,4 +1,4 @@
-package com.github.mcri.Mixins;
+package com.github.mcri.mixins;
 
 import java.util.Iterator;
 import java.util.Map;

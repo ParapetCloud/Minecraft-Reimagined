@@ -1,4 +1,4 @@
-package com.github.mcri.Mixins;
+package com.github.mcri.mixins;
 
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.projectile.FireworkRocketEntity;

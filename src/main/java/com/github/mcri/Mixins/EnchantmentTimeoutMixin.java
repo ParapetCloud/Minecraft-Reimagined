@@ -1,4 +1,4 @@
-package com.github.mcri.Mixins;
+package com.github.mcri.mixins;
 
 import org.spongepowered.asm.mixin.Mixin;
 

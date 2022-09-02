@@ -5,10 +5,10 @@ import net.fabricmc.api.ModInitializer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.github.mcri.StatusEffects.*;
 import com.github.mcri.block.*;
+import com.github.mcri.effect.*;
 import com.github.mcri.enchantments.ModEnchantments;
-import com.github.mcri.Items.ModItems;
+import com.github.mcri.items.ModItems;
 
 public class MinecraftReimagined implements ModInitializer {
 	// This logger is used to write text to the console and the log file.
@@ -26,22 +26,9 @@ public class MinecraftReimagined implements ModInitializer {
 		// Proceed with mild caution.
 		LOGGER.info("Initializing...");
 
-		ModItems.registerItems();
+		ModItems.registerAll();
 		ModEnchantments.registerAll();
-
-		// Status effects
-		FrozenEffect.Register();
-		BaneofEnderEffect.Register();
-
-		// Blocks
-		DirtSlab.Register();
-		DirtyCobblestone.Register();
-		SnowyCobblestone.Register();
-		DirtyCobblestoneSlab.Register();
-		SnowyCobblestoneSlab.Register();
-		DirtyCobblestoneStairs.Register();
-		SnowyCobblestoneStairs.Register();
-		DirtyCobblestoneWall.Register();
-		SnowyCobblestoneWall.Register();
+		ModStatusEffects.registerAll();
+		ModBlocks.registerAll();
 	}
 }
