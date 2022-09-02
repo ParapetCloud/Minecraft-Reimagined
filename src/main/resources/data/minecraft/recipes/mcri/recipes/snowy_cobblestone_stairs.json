@@ -1,0 +1,18 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "#  ",
+        "## ",
+        "###"
+    ],
+    "key": {
+        "#": {
+            "item": "mcri:snowy_cobblestone"
+        }
+    },
+    "result": {
+        "item": "mcri:snowy_cobblestone_stairs",
+        "count": 4
+    },
+    "group": "snowy_cobblestone_stairs"
+}
