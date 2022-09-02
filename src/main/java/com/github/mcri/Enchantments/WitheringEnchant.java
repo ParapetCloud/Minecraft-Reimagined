@@ -1,4 +1,4 @@
-package com.github.mcri.Enchantments;
+package com.github.mcri.enchantments;
 
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.EnchantmentTarget;
@@ -12,15 +12,8 @@ import net.minecraft.item.AxeItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.TridentItem;
-import net.minecraft.util.Identifier;
-import net.minecraft.util.registry.Registry;
 
 public class WitheringEnchant extends Enchantment {
-    public static final WitheringEnchant WITHERING = new WitheringEnchant();
-
-    public static void Register() {
-        Registry.register(Registry.ENCHANTMENT, new Identifier("mcri", "withering"), WITHERING);
-    }
 
     public WitheringEnchant() {
         super(Enchantment.Rarity.VERY_RARE, EnchantmentTarget.WEAPON, new EquipmentSlot[] { EquipmentSlot.MAINHAND });
@@ -42,7 +35,7 @@ public class WitheringEnchant extends Enchantment {
 
     @Override
     protected boolean canAccept(Enchantment other) {
-        if (other == Enchantments.FIRE_ASPECT || other == PoisonAspectEnchant.POISON || other == FrostbiteEnchant.FROSTBITE) {
+        if (other == Enchantments.FIRE_ASPECT || other == ModEnchantments.POISON_ASPECT || other == ModEnchantments.FROSTBITE) {
             return false;
         }
         return true;

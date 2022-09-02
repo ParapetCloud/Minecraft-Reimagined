@@ -108,7 +108,7 @@ public abstract class AnvilRemoveMaxLevelMixin extends ForgingScreenHandler {
                     Map<Enchantment, Integer> rightEnchantLevels = EnchantmentHelper.get(inputStackRight);
                     boolean hasCombinableEnchant = false;
                     boolean hasUncombinableEnchant = false;
-                    Iterator enchantIter = rightEnchantLevels.keySet().iterator();
+                    Iterator<Enchantment> enchantIter = rightEnchantLevels.keySet().iterator();
 
                     label155: while (true) {
                         Enchantment enchantment;
@@ -137,7 +137,7 @@ public abstract class AnvilRemoveMaxLevelMixin extends ForgingScreenHandler {
                             canCombine = true;
                         }
 
-                        Iterator var17 = leftEnchantLevels.keySet().iterator();
+                        Iterator<Enchantment> var17 = leftEnchantLevels.keySet().iterator();
 
                         while (var17.hasNext()) {
                             Enchantment enchantment2 = (Enchantment) var17.next();

@@ -1,4 +1,4 @@
-package com.github.mcri.Enchantments;
+package com.github.mcri.enchantments;
 
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.EnchantmentHelper;
@@ -18,16 +18,9 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.SwordItem;
 import net.minecraft.item.TridentItem;
-import net.minecraft.util.Identifier;
-import net.minecraft.util.registry.Registry;
 
 public class BaneofVillagersEnchant extends Enchantment {
-    public static final BaneofVillagersEnchant BANEVILLAGERS = new BaneofVillagersEnchant();
-
-    public static void Register() {
-        Registry.register(Registry.ENCHANTMENT, new Identifier("mcri", "bane_villagers"), BANEVILLAGERS);
-    }
-
+    
     public BaneofVillagersEnchant() {
         super(Enchantment.Rarity.RARE, EnchantmentTarget.WEAPON, new EquipmentSlot[] { EquipmentSlot.MAINHAND });
     }
@@ -46,10 +39,10 @@ public class BaneofVillagersEnchant extends Enchantment {
     @Override
     protected boolean canAccept(Enchantment other) {
         if (other == Enchantments.BANE_OF_ARTHROPODS ||
-                other == BaneofAquaticsEnchant.BANEAQUATICS ||
-                other == BaneofIllagersEnchant.BANEILLAGERS ||
-                other == BaneofSwinesEnchant.BANESWINES ||
-                other == BaneofEnderEnchant.BANEENDER) {
+                other == ModEnchantments.BANE_AQUATICS ||
+                other == ModEnchantments.BANE_ILLAGERS ||
+                other == ModEnchantments.BANE_SWINES ||
+                other == ModEnchantments.BANE_ENDER) {
             return false;
         }
         return true;
