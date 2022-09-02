@@ -9,7 +9,8 @@
     "EndermanDisableTPMixin",
     "ShulkerDisableTPMixin",
     "EnderpearlDisableTPMixin",
-    "ElytraDisableFireworksMixin"
+    "ElytraDisableFireworksMixin",
+    "TridentWaterjetMixin"
   ],
   "client": [],
   "server": [],
