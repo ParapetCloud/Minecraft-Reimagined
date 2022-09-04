@@ -7,8 +7,10 @@ import org.slf4j.LoggerFactory;
 
 import com.github.mcri.block.*;
 import com.github.mcri.effect.*;
+import com.github.mcri.effect.scroll.ScrollEffects;
 import com.github.mcri.enchantments.ModEnchantments;
 import com.github.mcri.items.ModItems;
+import com.github.mcri.scroll.Scrolls;
 
 public class MinecraftReimagined implements ModInitializer {
 	// This logger is used to write text to the console and the log file.
@@ -17,7 +19,6 @@ public class MinecraftReimagined implements ModInitializer {
 	public static final String MOD_ID = "mcri";
 	
 	public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
-
 
 	@Override
 	public void onInitialize() {
@@ -30,5 +31,7 @@ public class MinecraftReimagined implements ModInitializer {
 		ModEnchantments.registerAll();
 		ModStatusEffects.registerAll();
 		ModBlocks.registerAll();
+		ScrollEffects.registerAll();
+		Scrolls.registerAll();
 	}
 }

@@ -26,5 +26,14 @@
     "block.mcri.dirty_cobblestone_stairs": "Dirty Cobblestone Stairs",
     "block.mcri.snowy_cobblestone_stairs": "Snowy Cobblestone Stairs",
     "block.mcri.dirty_cobblestone_wall": "Dirty Cobblestone Wall",
-    "block.mcri.snowy_cobblestone_wall": "Snowy Cobblestone Wall"
+    "block.mcri.snowy_cobblestone_wall": "Snowy Cobblestone Wall",
+    "item.mcri.scroll": "Scroll",
+    "item.mcri.scroll.effect.cleansing": "Cleansing Scroll",
+    "item.mcri.scroll.effect.lightning": "Lightning Scroll",
+    "item.mcri.scroll.effect.withering": "Withering Scroll",
+    "itemGroup.mcri.scrolls": "Scrolls",
+    "scrollEffect.none": "No Effect",
+    "scrollEffect.mcri.cleansing": "Removes all effects from yourself",
+    "scrollEffect.mcri.lightning": "Summons lightning where you look",
+    "scrollEffect.mcri.withering": "Applies Withering to all entities in the area"
 }
