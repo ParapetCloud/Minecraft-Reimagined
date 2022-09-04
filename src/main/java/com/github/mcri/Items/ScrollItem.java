@@ -93,6 +93,10 @@ public class ScrollItem extends Item {
 
     @Override
     public ActionResult useOnEntity(ItemStack stack, PlayerEntity user, LivingEntity entity, Hand hand) {
+        if (user.getItemCooldownManager().isCoolingDown(stack.getItem())) {
+            return ActionResult.PASS;
+        }
+
         boolean used = false;
         List<ScrollEffect> effects = ScrollUtil.getScrollEffects(stack);
 
