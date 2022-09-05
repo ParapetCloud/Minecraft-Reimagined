@@ -8,6 +8,7 @@ import net.minecraft.util.registry.Registry;
 public final class ModStatusEffects {
     public static FrozenEffect FROZEN;
     public static BaneofEnderEffect ENDERBANE_EFFECT;
+    public static InnerStengthEffect INNER_STRENGTH;
 
     /**
      * Registers all the effects that have been pre-registered

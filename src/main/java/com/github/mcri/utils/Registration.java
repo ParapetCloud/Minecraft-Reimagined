@@ -52,7 +52,7 @@ public final class Registration {
                 }
             }
             catch (Exception ex) {
-                MinecraftReimagined.LOGGER.error("Failed to register " + inheritsFrom.getName() + " '" + fields[i].getName().toLowerCase() + "'");
+                MinecraftReimagined.LOGGER.error("Failed to register " + inheritsFrom.getName() + " '" + fields[i].getName().toLowerCase() + "'\n" + ex.toString());
             }
         }
     }

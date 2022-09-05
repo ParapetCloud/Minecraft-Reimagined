@@ -10,7 +10,8 @@
     "ShulkerDisableTPMixin",
     "EnderpearlDisableTPMixin",
     "ElytraDisableFireworksMixin",
-    "TridentWaterjetMixin"
+    "TridentWaterjetMixin",
+    "DamageTrackerDisableClearOnDeathMixin"
   ],
   "client": [],
   "server": [],

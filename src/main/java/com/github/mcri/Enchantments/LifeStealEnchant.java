@@ -35,29 +35,11 @@ public class LifeStealEnchant extends Enchantment {
 
     @Override
     public void onTargetDamaged(LivingEntity user, Entity target, int level) {
+        if (target instanceof LivingEntity entity) {
+            float regen = entity.getDamageTracker().getMostRecentDamage().getDamage() / 4;
+            user.heal(regen);
+        }
         
-        // players need to check that they aren't spamming
-        IEnchantmentTimoutExt timeouts = (IEnchantmentTimoutExt)user;
-
-        // cache the last time
-        int lastLifeStealAttempt = timeouts.getLastLifeSteal();
-        timeouts.setLastLifeSteal(user.age);
-
-        // mobs and players need different timouts due to how they can attack
-        if (user instanceof PlayerEntity player) {
-            // for players we need to make sure they aren't spamming
-            if (player.getAttackCooldownProgress(user.age - lastLifeStealAttempt) < 1) {
-                return;
-            }
-        }
-        else {
-            // mobs only need a check to make sure they aren't getting multiple damages from sweeping edge
-            if (user.age - lastLifeStealAttempt < 1) {
-                return;
-            }
-        }
-
-        user.heal(2);
         super.onTargetDamaged(user, target, level);
     }
 }

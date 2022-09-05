@@ -10,6 +10,7 @@ import com.github.mcri.effect.*;
 import com.github.mcri.effect.scroll.ScrollEffects;
 import com.github.mcri.enchantments.ModEnchantments;
 import com.github.mcri.items.ModItems;
+import com.github.mcri.potion.ModPotions;
 import com.github.mcri.scroll.Scrolls;
 
 public class MinecraftReimagined implements ModInitializer {
@@ -27,11 +28,19 @@ public class MinecraftReimagined implements ModInitializer {
 		// Proceed with mild caution.
 		LOGGER.info("Initializing...");
 
+		LOGGER.info("Registering Items...");
 		ModItems.registerAll();
-		ModEnchantments.registerAll();
-		ModStatusEffects.registerAll();
+		LOGGER.info("Registering Blocks...");
 		ModBlocks.registerAll();
+		LOGGER.info("Registering Status Effects...");
+		ModStatusEffects.registerAll();
+		LOGGER.info("Registering Enchantments...");
+		ModEnchantments.registerAll();
+		LOGGER.info("Registering Scroll Effects...");
 		ScrollEffects.registerAll();
+		LOGGER.info("Registering Scrolls...");
 		Scrolls.registerAll();
+		LOGGER.info("Registering Potions...");
+		ModPotions.registerAll();
 	}
 }
