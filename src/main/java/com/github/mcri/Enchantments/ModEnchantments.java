@@ -11,7 +11,6 @@ public final class ModEnchantments {
     public static BaneofEnderEnchant BANE_ENDER;
     public static BaneofIllagersEnchant BANE_ILLAGERS;
     public static BaneofSwinesEnchant BANE_SWINES;
-    public static BaneofVillagersEnchant BANE_VILLAGERS;
 
     // Skies
     public static ClearSkiesEnchant CLEAR_SKIES;
