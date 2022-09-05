@@ -26,7 +26,7 @@ public final class ModEnchantments {
     // Other
     public static FrostbiteEnchant FROSTBITE;
     public static LevitationEnchant LEVITATION;
-    public static LifeStealEnchant LIFESTEAL;
+    public static LifeStealEnchant LIFE_STEAL;
     public static LightningEnchant LIGHTNING;
     public static MountedEnchant MOUNTED;
     public static WaterjetEnchant Waterjet;
